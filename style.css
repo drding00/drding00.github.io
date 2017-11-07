@@ -1,0 +1,791 @@
+/*
+Theme Name: The Wilson Foundation Theme
+Description: A theme built with WordPress for The Wilson Foundation
+Author: Danielle Lyons
+Build Date: May 2017
+Last Update: Aug 9th 2017
+Version: 1.0
+
+*/
+
+
+*{ /* styles to make borders not take on extra space */ -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; /*border: 1px solid #000;*/ } 
+
+/**{ 
+   border: 1px solid #000000;
+}
+*/
+html { overflow-y: scroll; /* fix for the scrollbar push issue */ height: 100%; margin: 0; padding: 0; } 
+
+body{ font-family: Open Sans; font-size: 100%; background: #fbfbfb; color: #000000; height: 100%; margin: 0; padding: 0;} /* Browser style reset so they all play nice */ 
+
+@font-face {
+    font-family: Signika;
+    src: url(fonts/Signika-Regular.ttf);
+}
+
+
+a{
+	color: #532f91;
+	text-decoration: none;
+}
+
+
+#nav{
+   width: 100%;
+   position: relative;
+   padding-bottom: 3px;
+   text-align: right;
+
+}
+
+#nav ul{
+	vertical-align: bottom;
+	width: 100%;
+}
+
+#nav ul li{
+	display: inline-block;
+	list-style-type: none;
+	padding-right: 2%;
+	
+}
+
+#nav ul li a{
+	width: 100%;
+    height: auto;
+	text-decoration: none;
+	font-size: 125%;
+	font-family: Open Sans;
+	color: #ffffff;
+}
+
+#nav ul li a:after {
+	font-family: FontAwesome;
+	content:"\f040";
+	position: relative;
+	left: 10px;
+	transition: all 200ms ease;
+}
+
+#nav ul li a:hover:after{
+	position: relative;
+	left: 5px;
+}
+
+
+/*#nav ul li i{
+	color: #ffffff;
+}*/
+
+
+
+
+#header{
+
+	width: 100%;
+	max-width: 1600px;
+	margin-bottom: 2%;
+	background: #532f91;
+	overflow: hidden;
+	
+
+}
+
+#header h1{
+	margin-top: 40px;
+	margin-left: 40px;
+	padding-left: 20px;
+	color: #ffffff;
+	font-size: 300%;
+	font-family: Corbel;
+	border-left: 20px solid #ffffff;
+	line-height: 45px;
+}
+
+#emailcontact {
+	width: 100%;
+	max-width: 1600px;
+	padding-right: 2%;
+	font-size: 14px;
+	color: #ffffff;
+	text-align: right;
+
+}
+
+#emailcontact a{
+	color: #ffffff;
+}
+
+#bar{
+    width: 100%;
+    max-width: 2%;
+    height: 150px;
+    float: left;
+    position: relative;
+    top: 47px;
+    margin-left: 40px;
+    border-left: 20px solid #ffffff;
+    padding-top: 0px;
+    overflow: hidden;
+}
+
+
+
+.title{
+	color: #ffffff;
+	font-size: 125px;
+	font-family: Corbel;
+	word-wrap: break-word;
+	margin: 0px;
+	padding: 0px;
+	padding-left: 2%;
+	position: relative;
+    top: -18px;
+	line-height: 117px;
+	width:inherit;
+}
+
+#purpletitle{
+    color: #482880;
+    position: relative;
+    font-weight: bold;
+
+}
+
+#slideshow{
+	float: right;
+	margin: 2% 4%;
+}
+
+
+#slidebanner{
+	width: 100%;
+	max-width: 470px;
+	max-height: 340px;
+	overflow: hidden;
+    border: 10px solid #ffffff;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+#slidebanner li{
+	    position: absolute;
+    max-width: 100%;
+    width: 100%;
+    height: 340px;
+    max-height: 100%;
+}
+
+#slidebanner img{
+ height: 100%;
+    width: 100%;
+	display: block;
+	vertical-align: bottom;
+
+}
+
+
+#content{
+	width: 100%;
+	max-width: 1170px;
+	margin: 0 auto;
+	text-align: justify;
+}
+
+#anchor{
+	height: 20px;
+	display: block;
+}
+
+#intro{
+	width: 100%;
+	max-width: 1480px;
+	margin: 0 auto;
+	padding-bottom: 1%;
+
+}
+
+#intro h1, #apps h1{
+	text-align: left;
+	font-family: Corbel;
+	margin-left: 2.5%;
+	
+}
+
+#intro h2{
+	margin-left: 2%;
+    	margin-right: 2%;
+
+}
+
+#tinybar{
+	width: 2px;
+	height: 100%;
+	margin-right: 0.5%;
+	background: #532f91;
+}
+
+#photo{
+	display: block;
+	width: 100%;
+	max-width: 300px;
+	max-height: 340px;
+}
+
+#photobox{
+	display: block;
+	width: 100%;
+	max-width: 300px;
+	max-height: 340px;
+	overflow: hidden;
+    border: 10px solid #ffffff;
+    margin: 0 2%;
+    -webkit-box-shadow: 13px 11px 7px -7px rgba(0,0,0,0.75);
+	-moz-box-shadow: 13px 11px 7px -7px rgba(0,0,0,0.75);
+	box-shadow: 13px 11px 7px -7px rgba(0,0,0,0.75);
+	float: left;
+}
+
+#intro p{
+	font-size: 115%;
+	font-family: Open Sans;
+	margin-left: 2%;
+	margin-right: 2%;
+	text-align: justify;
+
+
+}
+
+#intro a{
+	font-weight: bold;
+	
+}
+
+
+/* ===== Applications section ===== */
+
+
+#apps{
+	width: 100%;
+	max-width: 1480px;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 5%;
+	overflow: hidden;
+}
+
+#container{
+
+	display: -webkit-flex; 
+	display: -ms-flexbox; 
+	display: -webkit-inline-box;
+	display: flex; 
+	overflow: hidden;
+	
+}
+
+
+.cabbox{
+    width: 40%;
+    text-align: center;
+    vertical-align: top;
+    padding: 2% 1.5%;
+    margin: 0 3%;
+    margin-top: 2%;
+    border: 5px solid #bdbdbd;
+    background: #ffffff;
+    border-radius: 10px;
+    /*background: #e6e6e6;
+    border: 5px solid #fff;*/
+    display: inline-block;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+#student{
+	background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(images/collegestudent.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+#grant{
+	background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(images/pencils.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+
+#apps .cabbox h1{
+	margin-left: 0px;
+	text-align: left;
+}
+
+.cabbox p{
+	text-align: justify;
+	width: 100%;
+	margin: 0 auto;
+	font-size: 18px;
+	flex-grow: 1;
+	/*-webkit-flex-flex-grow: 1;*/
+}
+
+.cabbox a{
+	width: 100%;
+	max-width: 307px;
+	margin: 0 auto;
+	display: block;
+}
+
+.buttonlink{
+	display: block;
+	margin-top: 5%;
+	width: 100%;
+	max-width: 275px;
+	height: 100%;
+	max-height: 65px;
+	/*padding: 3% 15%;*/
+	color: #ffffff;
+	font-family: 'Yanone Kaffeesatz';
+	font-size: 28px;
+	border: 4px solid #ffffff;
+	border-radius: 20px;
+	text-transform: uppercase;
+	line-height: 60px;
+	/*background: #482880;*/
+		transition: all 0.5s ease;
+
+}
+
+.buttonlink:hover{
+	background: #482880;
+	border: solid 4px #482880;
+	color: #ffffff;
+
+}
+
+.cabbox img{
+	margin-top: 5%;
+	vertical-align: bottom;
+	width: 100%;
+	max-width: 307px;
+	display: block;
+/*	height: 100%;*/
+
+}
+
+@-moz-document url-prefix() {
+  .cabbox img {
+    margin-bottom: 5%;
+ }
+  .cabbox a {
+    margin-bottom: 5%;
+ }
+}
+
+
+@media screen and (max-width: 650px) {
+
+#container{
+	display: inherit;
+}
+
+.cabbox{
+	display: inherit;
+	width: inherit;
+}
+
+.cabbox a{
+	margin: 5% auto;
+}
+
+.cabbox img{
+	margin: 5% auto;
+}
+
+}
+
+
+#footer{
+	width: 100%;
+	max-width: 1600px;
+	height: 100px;
+	margin-top: 3%;
+	text-align: center;
+	font-size: 12pt;
+	font-style: italic;
+	color: #ffffff;
+	background: #532f91; 
+}
+
+#footer p{
+	padding-top: 40px;
+}
+
+/*==== thank you page styles ====*/
+
+.page-thankyou #applicationlink{
+
+	display: none;
+
+}
+
+
+/*==== form stuff ====*/
+
+.home #wrapper{
+	display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+form, .wpcf7{
+    display: block;
+	width: 100%;
+    max-width: 500px;
+	margin: 0 auto;
+}
+
+form input, textarea {
+	padding: 10px;
+	margin-top: 2%;
+	font-size: 16px;
+	border-radius: 5px;
+  	border: solid 1px #969696;
+  	transition: box-shadow 0.3s, border 0.3s;
+  	width: 100%;
+    resize: none;
+}
+
+form input[type="radio"]{
+	width: 15%;
+}
+
+span.wpcf7-list-item {
+    
+    margin: 2% 0 0 0 !important;
+    width: 15%;
+}
+
+.required{
+	color: red;
+}
+
+.charcount{
+	font-weight: bold;
+}
+
+.wpcf7-not-valid-tip{
+	color: red;
+	font-weight: bold;
+}
+
+.screen-reader-response ul{
+ 	display: none;
+
+}
+
+#formbutton{
+	transition: all 0.5s ease;
+	background: transparent;
+	border: solid 3px #532f91;
+	color: #532f91;
+	font-family: corbel;
+	font-weight: bold;
+	font-size: 20px;
+	margin: 2% 0;
+
+}
+
+#formbutton:hover{
+	background: #532f91;
+	color: #ffffff;
+
+
+}
+
+form input:focus,
+form input.focus, textarea:focus, textarea.focus{
+  border: solid 1px #532f91;
+  box-shadow: 0 0 5px 1px #969696;
+  outline: none;
+}
+
+#formtitle{
+        font-size: 200%;
+		font-family: corbel;
+		text-align: center;
+		margin-top: 5%;
+
+
+}
+
+form h1{
+	font-size: 130%;
+	font-family: corbel;
+	padding-left: 2%;
+	margin: 5% 0;
+	border-left: 5px solid #532f91;
+
+}
+
+form p{
+	font-size: 100%;
+	font-family: corbel;
+}
+
+.inputlabel{
+	margin-bottom: 0;
+	font-family: corbel;
+	font-weight: bold;
+	font-size: 120%;
+	
+}
+
+.questiontext{
+	font-family: corbel;
+	font-weight: bold;
+	font-size: 130%;
+}
+
+.textarea{
+	width: 100%;
+	resize: none;
+	font-size: 16px;
+}
+
+
+
+/*====================
+	Board Section
+====================*/
+
+
+#board h1{
+	font-family: Corbel;
+	margin-left: 2.5%;
+	font-size: 2em;
+}
+
+#board{
+	width: 100%;
+    max-width: 1480px;
+    margin: 0 auto;
+
+}
+
+#members{
+	padding-top: 3%;
+	margin: 0 2%;
+}
+
+.row{
+	margin-bottom: 2%;
+}
+
+.bio{
+	font-family: Open Sans;
+	text-align: justify;
+}
+
+.biopic{
+	width: 100%;
+	max-width: 150px;
+	height: auto;
+	float: left;
+	margin:0 4% 2% 0;
+	border: 7px solid #ffffff;
+	webkit-box-shadow: 13px 11px 7px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 13px 11px 7px -7px rgba(0,0,0,0.75);
+    box-shadow: 13px 11px 7px -7px rgba(0,0,0,0.75);
+}
+
+.name{
+	font-size: 14pt;
+	font-weight: bold;
+	margin: 0px;
+	
+}
+
+.position{
+	margin-top: 0px;
+	font-size: 13pt;
+	font-style: italic;
+}
+
+.row .profile{
+	width: 100%;
+	max-width: 49%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.profile:first-child{
+	padding-right:2%;
+}
+
+
+/*====================
+	Contact Section
+====================*/
+
+#contactus{
+	width: 100%;
+    max-width: 1480px;
+    margin: 0 auto;
+
+}
+
+#contactus h1{
+	font-family: Corbel;
+	margin-left: 2.5%;
+	font-size: 2em;
+}
+
+
+#contactus p{
+	margin-left: 2.5%;
+}
+
+#contactus .inputlabel{
+	margin-left: 0;
+}
+
+
+/*====================
+	Mobile Styles
+====================*/
+
+@media screen and (max-width: 768px) {
+
+form{
+		max-width: 500px;
+		padding: 0 5%;
+}
+
+form input {
+
+  	width: 100%;
+}
+
+#nav ul li {
+    padding-right: 5%;
+}
+
+.row .profile {
+
+    max-width: 100%;
+    margin-bottom: 2%;
+
+}
+
+}
+
+@media screen and (max-width: 650px) {
+
+#photo, #photobox{
+	max-width: 200px;
+}
+
+}
+
+
+
+@media screen and (max-width: 450px) {
+
+#emailcontact {
+	text-align: center;
+
+}
+
+#photo, #photobox{
+	float: none;
+	margin: 0 auto;
+}
+
+#intro{
+	padding-bottom: 15%;
+}
+
+#intro h1{
+    text-align: center;
+    font-size: 150%;
+    margin: 6% auto;
+    padding-left: 1.5%;
+}
+
+#tinybar{
+	margin-right: 1.5%;
+
+}
+
+.biopic {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 4%;
+}
+
+.name, .position{
+	text-align: center;
+}
+
+
+
+}
+
+
+
+
+@media screen and (max-width: 320px) {
+
+form h1{
+	
+	margin: 10% 0;
+	padding-left: 5%;
+
+}
+
+.questiontext{
+	font-size: 125%;
+}
+
+.inputlabel{
+	width: 100%;
+	font-size: 120%;
+	font-weight: bold;
+}
+
+/*form input{
+	width: 90%;
+}*/
+
+
+
+#formtitle{
+	width: 100%;
+	margin: 0 auto;
+	font-size: 150%;
+}
+
+form {
+	padding: 0 5%;
+
+}
+
+.abouttext {
+     margin: 4% 5%;
+  }
+
+
+#header h1 {
+    font-size: 230%;
+    line-height: 40px;
+  
+}
+
+
