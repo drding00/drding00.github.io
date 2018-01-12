@@ -1,0 +1,291 @@
+/*Refs
+
+background color (purple) #3D2A57
+highlight color (yellow) #ECB415
+text color (white) #FFFFFF
+font agane s regular, agane s bold
+
+
+*/
+
+* { 
+/* styles to make borders not take on extra space */ 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+
+} 
+
+html { 
+	height: 100%; 
+	overflow-y: scroll; /* fix for the scrollbar push issue */ 
+} 
+
+body{  
+	height: 100%;
+	background: #3D2A57;
+	font-family: 'Agane';
+	font-size: normal 100%;
+} 
+
+/* Browser style reset so they all play nice */ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, time, mark, audio, video { 
+	margin: 0; 
+	padding: 0; 
+	outline: 0 none; 
+	vertical-align: baseline; 
+	font-size: 100%; 
+}
+
+@font-face {
+  font-family: 'Agane';
+  src: url('fonts/aganereg-webfont.eot');
+  src: url('fonts/aganereg-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/aganereg-webfont.woff2') format('woff2'), 
+       url('fonts/aganereg-webfont.woff') format('woff'), 
+       url('fonts/aganereg-webfont.ttf')  format('truetype'), 
+       url('fonts/aganereg-webfont.svg#svgFontName') format('svg'); 
+}
+
+@font-face{ 
+	font-family: 'Agane Bold';
+	src: url('fonts/Agane_bold.ttf') format('truetype');
+
+}
+
+
+@font-face {
+  font-family: 'Agane Extra Bold';
+  src: url('fonts/agane_extrabold-webfont.eot');
+  src: url('fonts/agane_extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/agane_extrabold-webfont.woff2') format('woff2'), 
+       url('fonts/agane_extrabold-webfont.woff') format('woff'), 
+       url('fonts/agane_extrabold-webfont.ttf')  format('truetype'), 
+       url('fonts/agane_extrabold-webfont.svg#svgFontName') format('svg'); 
+}
+
+/*@font-face{ 
+	font-family: 'Agane Extra Bold';
+	src: url('fonts/Agane_extrabold.ttf') format('truetype');
+
+}*/
+
+
+ h1{
+ 	font-family: 'Agane';
+ 	font-size: 1.8em;
+ 	font-weight: normal;
+ 	color: #ECB415;
+ 	text-transform: uppercase;
+ }
+
+ #boldfont{
+ 	font-family: 'Agane Extra Bold';
+
+ }
+
+ #container{
+ 	width: 100%;
+ 	max-width: 280px;
+ 	margin: 0 auto;
+ 	position: relative;
+ 	top: 15%;
+ 	border: 1px solid #ffffff;
+ 	text-align: center;
+ }
+
+ #formheader{
+ 	padding: 10%;
+ }
+
+ #formheader #logo{
+ 	width: 100%;
+ 	max-width: 60px;
+ 	height: 100%;
+ }
+
+ #formheader p{
+ 	color: #ECB415;
+ 	font-size: 15px;
+ }
+
+ form{
+ 	width: 100%;
+ 	background: #ffffff;
+ }
+
+ form input{
+ 	width: 100%;
+ 	height: 55px;
+ 	border-color: #cccccc;
+ 	border-style: solid;
+ 	border-width: 0 0 2px 0;
+ 	font-size: 16px;
+ 	padding-left: 3%;
+ }
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  text-align: center;
+  position: relative;
+  bottom: -15px;
+  color: #cccccc;
+  font-family: 'Agane';
+  font-size: 14px;
+  font-weight: 600;
+  
+}
+::placeholder { /* Firefox 19+ */
+  line-height: 80px; /*used because relative positioning doesn't work here*/
+  text-align: center;
+  color: #cccccc;
+  font-family: 'Agane';
+  font-size: 14px;
+  font-weight: 600;
+
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+  line-height: 80px; /*used because relative positioning doesn't work here*/
+  text-align: center;
+  color: #cccccc;
+  font-family: 'Agane';
+  font-size: 14px;
+  font-weight: 600;
+}
+:-moz-placeholder { /* Firefox 18- */
+  text-align: center;
+  position: relative;
+  bottom: -15px;
+  color: #cccccc;
+  font-family: 'Agane';
+  font-size: 14px;
+  font-weight: 600;
+}
+
+form input:focus{
+	outline: none;
+}
+
+ form button{
+ 	display: block;
+ 	width: 100%;
+ 	max-width: 160px;
+ 	height: 100%;
+ 	margin: 8% auto 2% auto;
+ 	padding: 2%;
+ 	border: 0;
+ 	border-radius: 25px;
+ 	background: #3D2A57;
+ 	color: #ECB415;
+ 	font-family: 'Agane';
+ 	font-size: 14px;
+ 	cursor: pointer;
+ }
+
+ form button:focus{
+ 	outline: none;
+ } 
+
+ form p{
+ 	padding-bottom: 8%;
+ 	color: #3D2A57;
+ 	font-size: 11px;
+ 	font-weight: bold;
+ 	
+ }
+
+ form a{
+ 	color: #ECB415;
+ 	text-decoration: none;
+ }
+
+/* ===============
+ LOGIN PAGE
+================*/
+
+#login{
+  background: #ECB415;
+}
+
+#login #container{
+  border: 2px solid #ffffff;
+}
+
+#login #formheader{
+  background: #ffffff;
+}
+
+#login #formheader h1{
+  color: #3D2A57;
+}
+
+#login #formheader p{
+  color: #3D2A57;
+  font-weight: bold;
+}
+
+#login form{
+  background: none;
+ }
+
+ #login #check{
+    width: 100%;
+    padding: 5%;
+    background: #ffffff;
+ }
+
+/* #login form input[type="checkbox"]{
+    width: initial;
+    height: initial;
+    background: #ffffff;
+    border: 2px solid #cccccc;
+    border-radius: 0px;
+ }*/
+
+ #login form #checkbox{
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  max-width: 14px;
+  max-height: 14px;
+  padding: 5px;
+  background: #ffffff;
+  border: 2px solid #cccccc;
+  position: relative;
+  vertical-align: bottom;
+ }
+
+ #login form #checkbox:checked {
+  background: #e9ecee;
+}
+
+#login form #checkbox:checked:after {
+  content: '\2714';
+  font-size: 11px;
+  position: absolute;
+  top: -3px;
+  left: 0px;
+  color: #99a1a7;
+}
+
+#login form button{
+  padding: 4%;
+  color: #ffffff;
+
+}
+
+#login #remember{
+  line-height: 18px;
+  color: #cccccc;
+  font-size: 11px;
+  vertical-align: middle;
+}
+
+#login form p{
+  font-weight: normal;
+  color: #ffffff;
+}
+
+#login form a{
+  font-weight: bold;
+  color: #3D2A57;
+}
