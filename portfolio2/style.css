@@ -1,0 +1,507 @@
+*{ 
+/* styles to make borders not take on extra space */ 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+	/*border: 1px solid #000;*/ 
+} 
+
+html { 
+	overflow-y: scroll; /* fix for the scrollbar push issue */ 
+	height: 100%; 
+} 
+
+body{ 
+	font-size: normal 100%; 
+	color: #000000; 
+	background: #fbfbfb;
+	height: 100%; 
+} 
+
+/* Browser style reset so they all play nice */ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, time, mark, audio, video { 
+	font-size: 100%; 
+	margin: 0; 
+	padding: 0; 
+	outline: 0 none; 
+	vertical-align: baseline; 
+}
+
+
+@font-face {
+    font-family: 'argh';
+    src: url('fonts/Aaargh-webfont.eot');
+    src: url('fonts/Aaargh-webfont.eot?') format('embedded-opentype'),
+         url('fonts/Aaargh-webfont.woff') format('woff'),
+         url('fonts/Aaargh-webfont.ttf') format('truetype'),
+         url('fonts/Aaargh-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'threedumb';
+    src: url('fonts/3Dumb-webfont.eot');
+    src: url('fonts/3Dumb-webfont.eot?') format('embedded-opentype'),
+         url('fonts/3Dumb-webfont.woff') format('woff'),
+         url('fonts/3Dumb-webfont.ttf') format('truetype'),
+         url('fonts/3Dumb-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'amatic';
+    src: url('fonts/AmaticSC-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+a {
+	text-decoration: none;
+}
+
+
+header{
+	background: url('images/starfield2.jpg');
+	background-position: center;
+	width: 100%;
+	min-height: 780px;
+	position: relative;
+	z-index: 1;
+}
+
+nav{
+	width: 100%;
+	max-width: 98%;
+	margin: 0 auto;
+	padding-top: 1%;
+
+}
+
+nav ul li {
+	display: inline-block;
+	margin-right: 1.5%;
+	list-style-type: none;
+}
+
+nav ul li a{
+	display: block;
+	padding: 5px;
+	color: #ffffff;
+	font-size: 1.8em;
+	font-family: amatic;
+	font-weight: normal;
+    /*border: 2px solid transparent;*/
+    border-radius: 5px;
+    background: transparent;
+    transition: all 0.8s ease;
+    
+}
+
+nav ul li a:hover{
+	/*border: 2px solid #ffffff;*/
+	background: #ffffff;
+	color: #000000;
+	/* -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);*/
+
+
+}
+
+
+#logo{
+	width: 100%;
+	height: auto;
+	max-width: 600px;
+	margin: 0 auto;
+	padding-top: 6%;
+	text-align: center;
+	position: relative;
+	z-index: 2;
+}
+
+#logo p{
+	color: #ffffff;
+	font-size: 8em;
+	font-family: amatic;
+	line-height: 110px;
+}
+
+#tagline{
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding-top: 1%;
+	text-align: center;
+	position: relative;
+	z-index: 2;
+}
+
+#tagline p{
+	color: #ffffff;
+	font-size: 3em;
+	font-family: amatic;
+	line-height: 110px;
+}
+
+#socialmedia{
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	z-index: 2;
+}
+
+#socialmedia ul li{
+	display: inline-block;
+	list-style-type: none;
+	padding-right: 2%;
+}
+
+#socialmedia ul li a{
+	font-size: 1.8em;
+	display: block;
+	color: #ffffff;
+	background: transparent;
+	border-radius: 5px;
+	padding: 5px 10px;
+	transition: all 0.8s ease;
+}
+
+#socialmedia ul li a:hover{
+	background: #ffffff;
+    color: #000000;
+}
+
+
+.titles{
+	font-family: amatic;
+    font-size: 5em;
+    width: 100%;
+/*    padding: 0 5%;*/
+text-align: center;
+display: table;
+}
+
+/*.titles:before, .titles:after{
+	position: relative;
+	top: 50px;
+	content:"";
+  	width: 40%;
+  	height: 11px;
+  	background: url('images/lines.png') repeat-x;
+  	display: table-cell;
+  	-webkit-background-clip: padding;
+       -moz-background-clip: padding;
+            background-clip: padding;
+}*/
+
+/*.titles:after {
+	content:"";
+  	width: 15%;
+  	height: 11px;
+  	background: url('images/lines.png') repeat-x;
+  	display: inline-block;
+}*/
+
+#portfolio .titles{
+	color: #ffffff;
+}
+
+/*.spacer{
+	width: 100%;
+	padding-top: 100px;
+    margin-top: -100px;
+}*/
+
+section{
+	padding: 3% 0;
+	display: block;
+}
+
+/*hr{
+	display:block;
+    border: 0px;
+    border-bottom: 2px dashed #67589B;
+    width: 90%;
+    height: 5px;
+/*    background:url('images/starfield2.jpg');
+    background-position: center;*/
+}*/
+
+
+
+/*===========================
+	About Section
+=============================*/
+
+#bio{
+	vertical-align: top;
+	display: inline-block;
+/*	width: 49.89%;
+    max-width: 900px;*/
+    margin: 0 3%;
+}
+
+#bio p{
+
+	padding: 0.5%;
+	text-align: justify;
+	font-size: 105%;
+	font-family: Open Sans
+
+}
+
+#profileimg{
+	width: 16.80%;
+	max-width: 250px;
+	height: auto;
+	max-height: 250px;
+	/*border: 5px solid #1756C2;*/
+	/*border: 2px solid #FF7D4C;*/
+	float: left;
+	border: 2px solid #67589B;
+    border-radius: 25%;
+    overflow: hidden;
+    margin: 0 2%;
+    vertical-align: top;
+}
+
+#profileimg img{
+	width: 100%;
+	height: auto;
+	display: block;
+
+}
+
+
+#skillopener{
+	font-size: 3em;
+	font-family: amatic;
+	font-weight: bold;
+	/*color: #AA697D;*/
+	/*color: #010F18;*/
+	color: #000000;
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 2%;
+
+}
+
+/*#skills{
+	text-align: center;
+	width: 100%;
+    background: rgba(0, 13, 13, 0.7);
+    /*background: rgba(170,105,125, 0.7);
+	border-bottom: 4px solid #227E92;
+}
+
+#skills ul li{
+	text-decoration: none;
+	display: inline-block;
+	margin: 0.5% 0;
+	font-size: 1.5em;
+	font-family: AlfaSlab;
+	color: #AA697D;
+	/*color: #010F18;*/
+	/*color: #227E92;
+	padding: 0 2%;
+}*/
+
+#skills{
+	text-align: center;
+	width: 100%;
+    /*background: rgba(0, 13, 13, 0.7);*/
+    /*background: rgba(170,105,125, 0.7);*/
+	padding: 1.2% 0;
+}
+
+#skills ul li{
+	text-decoration: none;
+	display: inline-block;
+	margin: 0.5% 0;
+	font-size: 1.5em;
+	font-family: Open Sans;
+	color: #000000;
+	/*color: #010F18;*/
+	/*color: #227E92;*/
+	padding: 0 2%;
+}
+
+.fa-html5 {
+	color: #FF6C39;
+}
+
+.fa-css3 {
+	color: #2965F1;
+}
+
+.fa-wordpress{
+     margin-top: 3%;
+     color: #21759B;
+}
+
+#JS-icon{
+	font-size: 72px;
+	line-height: 0px;
+}
+
+
+
+/*===========================
+	Project Section
+=============================*/
+
+#portfolio{
+	background: #0C132F;
+	position: relative;
+	
+
+}
+
+#portfolio:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.5;
+    background-image: url('images/singlestripe.png');
+    background-repeat: repeat;
+
+}
+
+#projects{
+	position: relative;
+	z-index: 5;
+}
+
+.project-row{
+	width: 100%;
+  margin-top: 5%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  overflow: hidden;
+
+}
+
+.project-item{
+	width: 23%;
+    padding: 0.5%;
+    margin: 0 0.5%;
+
+}
+
+.project-item div{
+	position:relative;
+	z-index: 1;
+	width:100%;
+	padding:80% 0 0;
+	overflow: hidden;
+
+}
+
+.project-item img{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	max-width: 175%;
+	max-height: 150%;
+	width: auto;
+	height: auto;
+	transform: translateX(-50%) translateY(-50%);
+
+    
+
+}
+
+.project-item p{
+	font-family: Open Sans;
+	color: #227E92;
+	margin-top: 0px;
+}
+
+
+/*===========================
+	Contact Section
+=============================*/
+
+
+#contact p{
+
+	padding: 0.5%;
+	text-align: justify;
+	font-size: 105%;
+	font-family: Open Sans
+
+}
+
+
+
+/* ==== mobile styles ==== */
+
+@media only screen and (max-width: 650px){
+
+	nav ul{
+		text-align: center;
+		padding: 20px;
+	}
+
+	nav ul li {
+
+    margin: 0% 5%;
+
+	}
+
+	nav ul li a {
+
+    font-size: 2.5em;
+
+	}
+
+	#logo p {
+    font-size: 6em;
+    line-height: 85px;
+	}
+
+} /* end 650 */
+
+@media only screen and (max-width: 450px){
+
+	nav ul{
+		text-align: center;
+		padding: 10px;
+	}
+
+	nav ul li {
+
+    margin: 0% 3%;
+
+	}
+
+	nav ul li a {
+
+    font-size: 2em;
+
+	}
+
+	#tagline p {
+
+    font-size: 2em;
+    line-height: 80px;
+
+	}
+
+} /* end 450 */
