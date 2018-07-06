@@ -1,0 +1,244 @@
+* { 
+/* styles to make borders not take on extra space */ 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+} 
+
+html { 
+	width: 100%;
+	height: 100%; 
+} 
+
+body{ 
+	width: 100%;
+	height: 100%; 
+	background: #4D625C;
+	position: relative;
+	font-family: 'Open Sans';
+} 
+
+/* Browser style reset so they all play nice */ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, time, mark, audio, video { 
+	font-size: 100%; 
+	margin: 0; 
+	padding: 0; 
+	outline: 0 none; 
+	vertical-align: baseline; 
+}
+
+
+#background{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	/*max-height: 500px;*/
+	position: absolute;
+	top: 0;
+	z-index: -1;
+	background: url(forest.jpg);
+	background-size: cover;
+	background-position: center;
+
+}
+
+header{
+	padding: 15vh 0 5vh 0;
+}
+
+
+#title{
+	width: 100%;
+	max-width: 500px;
+	margin: auto;
+	font-size: 150%;
+	color: #ffffff;
+	text-align: center;
+}
+
+#logo{
+	display: block;
+	width: 100%;
+	max-width: 200px;
+	height: 100%;
+	margin: auto;
+	padding-bottom: 2vh;
+}
+
+#description{
+	font-size: 20px;
+}
+
+#note{
+	font-weight: bold;
+	font-size: 14px;
+	padding-bottom: 20px;
+}
+
+.required{
+	color: red;
+}
+
+label, legend{
+	display: inline-block;
+	margin-bottom: 5px;
+	font-family: corbel;
+	font-weight: bold;
+	font-size: 120%;
+	padding-right: 5px;
+}
+
+legend{
+	padding: 0 10px;
+}
+
+#survey-form{
+	width: 100%;
+	max-width: 1024px;
+	margin: auto auto 20px auto;
+	padding: 30px;
+	border-radius: 5px;
+	background: #ffffff;
+}
+
+div{
+	margin: 30px auto;
+}
+
+li{
+	list-style-type: none;
+}
+
+form input[type="text"], form input[type="email"]{
+	width: 33%;
+}
+
+form input[type="number"]{
+	min-width: 8%;
+	margin-left: 17px;
+}
+
+form input:focus,
+form input.focus, textarea:focus, textarea.focus, select:focus{
+  border: solid 2px #77b37e;
+  /*box-shadow: 0 0 5px 1px #969696;*/
+  outline: none;
+}
+
+form input, textarea, select{
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 5px;
+  	border: solid 2px #4D625C;
+  	transition: box-shadow 0.3s, border 0.3s;
+}
+
+select{
+	padding: 5px;
+	font-size: 14px;	
+}
+
+/*#recommend{
+	margin-bottom: 10px;
+}*/
+
+fieldset{
+  padding: 10px;
+  border: 2px solid #4D625C;
+}
+
+.column{
+	display: inline-block;
+	width: 33%;
+	vertical-align: top;
+}
+
+#comments{
+	vertical-align: top;
+}
+
+textarea{
+	width: 100%;
+	max-width: 766px;
+	resize: vertical;
+}
+
+#buttons{
+	width: 100%;
+	max-width: 350px;
+	margin: auto;
+	text-align: center;
+}
+
+input[type="submit"]{
+	width: 100%;
+	max-width: 150px;
+	background: #77b37e;
+	color: #ffffff;
+	border: 2px solid #77b37e;
+	margin-right: 20px;
+	transform: all;
+	transition-timing-function: ease;
+}
+
+input[type="submit"]:hover{
+	border: 2px solid #4D625C;
+	background: #4D625C;
+}
+
+input[type="reset"]{
+	border: 2px solid #b93636;
+	background: #b93636;
+	color: #ffffff;
+}
+
+input[type="reset"]:hover{
+	border: 2px solid #8e1414;
+	background: #8e1414;
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+	main{
+		padding: 0 25px;
+	}
+
+	form input, textarea, select{
+
+	font-size: 18px;
+
+	}
+}
+
+@media only screen and (max-width: 650px) {
+
+	main {
+    padding: 0 10px;
+	}
+
+	form input[type="text"], form input[type="email"], form input[type="number"] {
+    	width: 100%;
+    	display: block;
+	}
+
+	select{
+		display: block;
+		margin-top: 10px;
+	}
+
+	form input[type="number"]{
+		width: 25%;
+		margin-left: 0;
+	}
+
+	#email-label{
+		display: block;
+		margin-top: 30px;
+	}
+
+	.column{
+      display: block;
+      width: 100%;
+	}
+
+}

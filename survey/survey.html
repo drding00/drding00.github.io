@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>freeCodeCamp Survey</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+<div id="background"></div>
+
+
+<header>
+	<img id="logo" src="fcclogo.png"/>
+	<h1 id="title">freeCodeCamp Survey</h1>
+</header>
+
+<main>
+
+<form id="survey-form">
+
+<p id="description">Please take a moment to let us know how we're doing at freeCodeCamp</p>
+<p id="note">Fields with a <span class="required">*</span> are required</p>
+
+<div>
+	<label name="name-label">Name:<span class="required">*</span></label><input type="text" placeholder="Jane Doe" id="name" required/>
+	<label name="email-label" id="email-label">Email:<span class="required">*</span></label><input type="email" placeholder="JaneDoe@someemail.com" id="email" required/>
+</div>
+
+<div>
+	<label name="number-label" id="number-label">Age:<span class="required">*</span></label><input type="number" id="number" min="1" max="100" placeholder="30" required/>
+</div>
+
+<div>
+	<label name="role">Which best describes your current role? </label>
+	<select id="dropdown">
+	  <option value="student">Student</option>
+	  <option value="full-time-job">Full Time Job</option>
+	  <option value="full-time-learner">Full Time Learner</option>
+	  <option value="na">Prefer not to say</option>
+	  <option value="other">Other</option>
+	</select> 
+</div>
+
+
+<div>
+	<label name="recommend" id="recommend">Would you recommend freeCodeCamp to a friend?<span class="required">*</span></label>
+	<ul>
+		<li><input type="radio" name="rec" value="definitely" required> Definitely</li>
+  		<li><input type="radio" name="rec" value="maybe" required> Maybe</li>
+    	<li><input type="radio" name="rec" value="not-sure" required> Not sure</li>
+    <ul>
+</div>
+
+
+<div>
+    <label name="favorite-feature">What's your favorite feature about freeCodeCamp?</label>
+	<select id="features">
+	  <option value="challenges">Coding challenges</option>
+	  <option value="projects">Projects</option>
+	  <option value="community">The community</option>
+	</select> 
+</div>
+
+
+
+<fieldset>
+	<legend name="future-improvements"> What would you like to see improved in the future? (Check all that apply) </legend>
+	<ul class="column">
+  		<li><input type="checkbox" name="improvement1" value="Front-end-Projects">Front-end Projects</li>
+		<li><input type="checkbox" name="improvement2" value="Back-end-Projects">Back-end Projects</li>
+		<li><input type="checkbox" name="improvement3" value="Data-Visualization">Data Visualization</li>
+		<li><input type="checkbox" name="improvement4" value="Challenges">Challenges</li>
+	</ul>
+	<ul class="column">
+		<li><input type="checkbox" name="improvement5" value="Open-Source-Community">Open Source Community</li>
+		<li><input type="checkbox" name="improvement6" value="Gitter">Gitter help rooms</li>
+		<li><input type="checkbox" name="improvement7" value="Videos">Videos</li>
+		<li><input type="checkbox" name="improvement8" value="Meetups">City Meetups</li>
+	</ul>
+	<ul class="column">
+		<li><input type="checkbox" name="improvement9" value="Wiki">Wiki</li>
+		<li><input type="checkbox" name="improvement10" value="Forum">Forum</li>
+		<li><input type="checkbox" name="improvement11" value="More-Courses">Additional Courses</li>
+	</ul>
+</fieldset>
+
+<div>
+	<label name="comments" id="comments">Questions or Comments?</label>
+	<br>
+	 <textarea name="message" rows="5" cols="30">Enter your message here
+	 </textarea> 
+</div>
+
+
+<div id="buttons">
+		<input type="submit" value="Submit"><input type="reset">
+</div>
+
+</form>
+
+</main>
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+</body>
+</html>
