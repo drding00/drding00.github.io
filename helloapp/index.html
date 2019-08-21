@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>First Component</title>
+
+<style>
+
+body, html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#main, #root{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#headerbar{
+    padding: 20px;
+    background: rgb(70, 181, 255);
+    color: #fff;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+#navbar{
+    margin-right: 5px;
+    text-align: right;
+    flex-grow: 1;
+}
+
+#navbar li{
+    display: inline-block;
+    padding: 0.5vw;
+    list-style-type: none;
+}
+
+#navbar li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#image {
+    display: block;
+    width: 100%;
+    max-width: 40%;
+    margin: 0 auto;
+}
+
+#welcome-message{
+    text-align: center;
+    font-size: 2em;
+}
+
+#footerbar{
+    height: 5vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    background: rgb(70, 181, 255);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+</style>
+
+
+
+
+</head>
+
+
+<body>
+
+<div id="root"></div>
+
+
+
+<script src="https://unpkg.com/react/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone"></script>
+
+
+<script src="header.js" type='text/jsx'></script>
+<script src="body.js" type='text/jsx'></script>
+<script src="footer.js" type='text/jsx'></script>
+<script src="index.js" type='text/jsx'></script>
+
+</body>
+</html>
