@@ -10,12 +10,18 @@ Link: #FF6E17
 
 */
 
+/* Browser style reset so they all play nice */ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, time, mark, audio, video { 
+	font-size: 100%; 
+	margin: 0; 
+	padding: 0; 
+	outline: 0 none; 
+	vertical-align: baseline; 
+}
+
 
 body{
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+    width: 100%;
+    height: 100%;
     box-sizing: border-box;
     background: #54007E;
 }
@@ -32,6 +38,8 @@ header{
     flex-direction: column;
     width: 100%;
     height: 100%;
+    padding-top: 2%;
+    padding-bottom: 20vh;
     background: rgba(84,0,126,0.5);
     overflow: hidden;
     z-index: 2;
@@ -91,6 +99,7 @@ a{
 #socialmedia-links{
     display: flex;
     justify-content: center;
+    padding-top: 1%;
 }
 
 #socialmedia-links li{
@@ -103,3 +112,19 @@ a{
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.6));
 }
 
+#vector{
+    width: 100%;
+    height: 200px;
+    background: #211824;
+    clip-path: polygon(0 0, 0% 100%, 100% 100%, 100% 0%, calc(100% - 50%) calc(100% - 60%));
+    margin-top: -120px;
+}
+
+main{
+    width: 100%;
+    height: 200px;
+    background: #211824; 
+}
+
+
+/*clip-path: polygon(0 0, 0% 100%, 100% 100%, 100% 0%, 50% 20%);*/
