@@ -15,7 +15,8 @@ Link: #FF6E17
 	margin: 0; 
 	padding: 0; 
 	outline: 0 none; 
-	vertical-align: baseline; 
+    vertical-align: baseline; 
+    box-sizing: border-box;
 }
 
 
@@ -143,15 +144,27 @@ a{
 
 main{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: #211824; 
 }
 
 #episode-section{
     display: flex;
-    flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     margin: 0 5%;
+}
+
+.break{
+    flex-basis: 100%;
+    height: 0px;
+}
+
+#featured{
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
 }
 
 #featured h2{
@@ -173,19 +186,61 @@ main{
     text-transform: uppercase;
 }
 
-#featured{
-    width: 100%;
-    max-width: 1200px;
-    height: 450px;
-}
-
 .featured-image{
     width: 100%;
-    height: 100%;
+    height: 450px;
     border: 8px solid #26BEB5;
     box-sizing: border-box;
-    background-image: url(./images/deadpool.jpg);
     background-position: center;
     background-size: cover;
 
+}
+
+#episode-list{
+    width: 100%;
+    max-width: 1200px;
+}
+
+#episodes{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-evenly;
+}
+
+.episode {
+    /* display: inline-block; */
+    width: 100%;
+    max-width: 350px;
+    height: 277px;
+}
+
+.episode h2{
+    height: 30px;
+    line-height: 35px;
+    padding-left: 6%;
+    margin-bottom: -1px;
+    color: #ffffff;
+    background: #CD3EF1;
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    clip-path: polygon(5% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.episode-image{
+    width: 100%;
+    height: 80%;
+    border: 8px solid #CD3EF1;
+    box-sizing: border-box;
+    background-position: center;
+    background-size: cover;
+}
+
+.episode h3{
+    margin-top: 1%;
+    font-size: 25px;
+    text-transform: uppercase;
 }
