@@ -198,9 +198,10 @@ main{
 
 #episode-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 350px));
+    /* grid-template-columns: repeat(auto-fit, minmax(350px, 350px)); */
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
-    grid-column-gap: 4vw;
+    grid-column-gap: 70px;
     grid-row-gap: 50px;
     max-width: 1200px;
     margin: 5% auto 0 auto;
