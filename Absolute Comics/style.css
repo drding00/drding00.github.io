@@ -282,7 +282,53 @@ main{
 }
 
 
+.host{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1404px;
+    height: 100%;
+    margin: 0 auto;
+    background: #26BEB5;
+    color: #ffffff;
+}
 
+.host-info{
+    display: flex;
+    justify-content: center;
+}
+
+.host-image{
+    width: 100%;
+    max-width: 630px;
+}
+
+.host-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.social-icons{
+    width: 100%;
+    max-width: 398px;
+}
+
+.social-icons li{
+    display: inline-block;
+    width: 100%;
+    max-width: 50px;
+    list-style-type: none;
+}
+
+.social-icons li img{
+    width: 100%;
+    height: 100%;
+    filter: brightness(0) invert(100%);
+}
+
+
+/* FOOTER */
 
 footer{
     width: 100%;
@@ -297,6 +343,9 @@ footer p{
     font-size: 20px;
     text-transform: uppercase;
 }
+
+
+/* MOBILE STYLES */
 
 @media screen and (max-width: 1024px){
     .episode h3{
