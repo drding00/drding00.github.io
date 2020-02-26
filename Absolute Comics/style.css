@@ -52,7 +52,7 @@ h1, h2, h3{
 }
 
 header{
-    background: url(./images/lightdots2.jpg);
+    background: url(./images/lightdots2.jpg) no-repeat;
     background-position: center;
     background-size: cover;
 }
