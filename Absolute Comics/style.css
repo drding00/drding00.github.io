@@ -57,8 +57,6 @@ header{
     background: url(./images/lightdots2.jpg) no-repeat center center;
     /* background-position: center; */
     background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
 }
 
 #header-overlay{
