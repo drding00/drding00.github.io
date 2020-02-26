@@ -28,6 +28,7 @@ body{
     box-sizing: border-box;
     background: #54007E;
     font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 }
 
 h1, h2, h3{
@@ -41,12 +42,13 @@ h1, h2, h3{
     max-width: 500px;
     height: 67px;
     line-height: 67px;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
     padding-left: 2%;
     background: #54007E;
     font-size: 35px;
     text-transform: uppercase;  
     clip-path: polygon(0 0, 90% 0%, 100% 100%, 0% 100%);
+    clear: both;
 }
 
 header{
@@ -274,7 +276,7 @@ main{
 
 #about-section{
     max-width: 1580px;
-    margin: 0 auto;
+    margin: 0 auto 2% auto;
 }
 
 #about-image{
@@ -298,7 +300,10 @@ main{
     margin-bottom: 1.5%;
     color: #ffffff;
     font-size: 18px;
-    font-weight: 400;
+}
+
+#about-section a{
+    font-weight: 600;
 }
 
 
@@ -310,7 +315,6 @@ main{
     height: 100%;
     min-height: 512px;
     margin: 0 auto 3% auto;
-    /* padding: 0.5%; */
     background: #26BEB5;
     color: #ffffff;
 }
@@ -355,7 +359,7 @@ main{
 .social-icons{
     width: 100%;
     max-width: 398px;
-    margin: 5% auto 3% auto;
+    margin: 11% auto;
     text-align: center;
     align-self: flex-end;
 }
@@ -411,6 +415,11 @@ footer p{
 }
 
 @media screen and (max-width: 850px){
+
+    .section-titles{
+        margin-bottom: 6%;
+    }
+
     #about-image{
         float: none;
         margin: 0 auto;
@@ -462,6 +471,11 @@ footer p{
 
 @media screen and (max-width: 480px){
 
+    .section-titles {
+        padding-left: 4%;
+        font-size: 25px;
+    }
+
     #banner-link{
         font-size: 30px;
         line-height: initial;
@@ -469,5 +483,22 @@ footer p{
 
     .episode h3{
         font-size: 30px;
+    }
+
+    .host-title{
+        font-size: 35px;
+    }
+
+    .host-bio{
+        max-width: 380px;
+    }
+
+    .social-icons li {
+        max-width: 40px;
+        margin: 0 2.5%;
+    }
+
+    footer p{
+        font-size: 14px;
     }
 }
