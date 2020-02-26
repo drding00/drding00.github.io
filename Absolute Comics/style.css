@@ -71,6 +71,7 @@ header{
 }
 
 nav{
+    margin: 0 0 5% 0;
     margin-bottom: 5%;
 }
 
@@ -417,6 +418,10 @@ footer p{
 
 @media screen and (max-width: 850px){
 
+    #logo{
+        max-width: 650px;
+    }
+
     .section-titles{
         margin-bottom: 6%;
     }
@@ -465,6 +470,10 @@ footer p{
         justify-content: space-evenly;
     }
 
+    nav{
+        margin: 5% auto;
+    }
+
     #episode-list{
         grid-template-columns: repeat(1, 1fr);
     }
@@ -476,8 +485,12 @@ footer p{
 
 @media screen and (max-width: 480px){
 
+    #logo{
+        max-width: 400px;
+    }
 
-    #featured{
+
+    #featured {
         margin: 11% auto;
     }
 
@@ -493,6 +506,7 @@ footer p{
     #banner-link{
         font-size: 30px;
         line-height: initial;
+        margin: 0 0 5% 0;
     }
 
     .episode h3{
