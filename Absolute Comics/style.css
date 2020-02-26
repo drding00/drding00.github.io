@@ -476,6 +476,11 @@ footer p{
 
 @media screen and (max-width: 480px){
 
+
+    #featured{
+        margin: 11% auto;
+    }
+
     #featured h3{
         font-size: 30px;
     }
