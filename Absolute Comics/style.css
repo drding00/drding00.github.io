@@ -209,6 +209,7 @@ main{
 }
 
 .featured-image img{
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -456,6 +457,10 @@ footer p{
 
 @media screen and (max-width: 695px){
 
+    .featured-image{
+        height: initial;
+    }
+
     nav ul{
         justify-content: space-evenly;
     }
@@ -470,6 +475,10 @@ footer p{
 }
 
 @media screen and (max-width: 480px){
+
+    #featured h3{
+        font-size: 30px;
+    }
 
     .section-titles {
         padding-left: 4%;
