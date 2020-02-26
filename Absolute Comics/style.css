@@ -528,6 +528,10 @@ footer p{
         margin: 0 2.5%;
     }
 
+    #watch-button{
+        margin: 9% auto;
+    }
+
     footer p{
         font-size: 14px;
     }
