@@ -1,4 +1,12 @@
 /*
+Theme Name: Absolute Theme
+Description: Wordpress theme for Absolute Comics
+Version: 1.0
+Author: Danielle Lyons & Tiffany Zuber
+Build Date: March 2020
+*/
+
+/*
 FONTS
 font-family: 'Anton', sans-serif;
 font-family: 'Roboto', sans-serif;
@@ -6,7 +14,6 @@ font-family: 'Roboto', sans-serif;
 COLORS:
 Main: #54007E
 Link: #FF6E17
-
 
 */
 
@@ -102,6 +109,7 @@ nav a {
 }
 
 a{
+    display: block;
     text-decoration: none;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);
     color: #FF6E17;
