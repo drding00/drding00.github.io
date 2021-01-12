@@ -73,13 +73,18 @@ header{
     font-family: FontAwesome;
     font-size: 30px;
     content: "\f0c9";
+    transition: 2s;
 }
 
 .toggle.active:before{
+    position: relative;
+    left: 200px;
+    z-index: 5;
     cursor: pointer;
     font-family: FontAwesome;
     font-size: 30px;
     content: "\f00d";
+    color: #111111;
 }
 
 .showcase{
