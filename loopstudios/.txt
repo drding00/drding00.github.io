@@ -1,0 +1,19 @@
+Loopstudio Project Checklist
+
+[x] Write main HTML (max width 1440px)
+[x] Style Header section (including background image)
+    [x] Main navigation rollovers
+    [] Style for mobile menu
+[x] Style Feature section
+[x] Style Product gallery
+    [x] "See all" button rollover
+    [x] Individual category rollovers
+[] Style Footer section
+    [] Mini nav rollovers
+    [x] Add Social media icons via FontAwesome
+        [] Social icon rollovers
+
+[] Add styles/breakpoint for mobile display (max width 375px)
+
+[] Script JS for mobile menu animation
+
