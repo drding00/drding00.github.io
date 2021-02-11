@@ -8,12 +8,17 @@ Loopstudio Project Checklist
 [x] Style Product gallery
     [x] "See all" button rollover
     [x] Individual category rollovers
-[] Style Footer section
-    [] Mini nav rollovers
+[x] Style Footer section
+    [x] Mini nav rollovers
     [x] Add Social media icons via FontAwesome
-        [] Social icon rollovers
+        [x] Social icon rollovers
 
 [] Add styles/breakpoint for mobile display (max width 375px)
 
 [] Script JS for mobile menu animation
+    [] Click hamburger icon, mobile nav slides in
+        [] Loopstudio logo fades in
+    [] Click on X icon
+        [] Loopstudio logo fades out
+        [] mobile nav slides out
 
