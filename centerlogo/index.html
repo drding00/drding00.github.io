@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="mobile-nav">
+        <ul>
+          <li><a href="#">Services</a></li>  
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Our Affiliates</a></li>
+          <li><a href="#">Contact Us!</a></li>
+        </ul>
+      </div>
+      <div class="mobile-button"></div>
+      <nav>
+        <ul id="left-nav">
+          <li><a href="#">Services</a></li>  
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Testimonials</a></li>
+        </ul>
+        <div id="logo"><a href="#"><img src="somelogo.png" title="Some Logo" alt="A teal textured circle with the text Some Logo in the center"/></a>
+        </div>
+        <ul id="right-nav">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Our Affiliates</a></li>
+          <li><a href="#">Contact Us!</a></li>
+        </ul>
+      </nav>
+      <main>
+      <h1>Centered Logos and Such</h1>
+        <p>I've had troubles with coding a responsive menu with a logo in the center of it. I've seen it done here and there, but was never able to achieve it properly myself.</p>
+        <p>The tricky part is how the menu collapses as the display gets smaller and smaller. Then there's the issue of where the logo goes when you get to <i>just</i> before a mobile view.</p>
+        <p>This example uses a combo of Flexbox and some absolute positioning. I've left the number of links uneven because that seems like a more realistic scenario.</p>
+      <section id="media-queries">  
+      <h2>At 1082px</h2>
+        <p>The logo gets an absolute position and moved up, pulling it from the flex container and allowing the left and right links to settle side by side one another.</p>
+        
+        <h2>At 950px</h2>
+        <p>The desktop navigation is hidden (via display: none;) and a mobile menu is displayed instead.</p>
+        </section>
+      </main>
+    <script src="https://kit.fontawesome.com/2c24b8ac1f.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
