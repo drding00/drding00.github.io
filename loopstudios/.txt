@@ -13,12 +13,12 @@ Loopstudio Project Checklist
     [x] Add Social media icons via FontAwesome
         [x] Social icon rollovers
 
-[] Add styles/breakpoint for mobile display (max width 375px)
+[x] Add styles/breakpoint for mobile display (max width 375px)
 
-[] Script JS for mobile menu animation
-    [] Click hamburger icon, mobile nav slides in
+[x] Script JS for mobile menu animation
+    [x] Click hamburger icon, mobile nav slides open
         [] Loopstudio logo fades in
-    [] Click on X icon
+    [x] Click on X icon
         [] Loopstudio logo fades out
-        [] mobile nav slides out
+        [x] mobile nav slides closed
 
