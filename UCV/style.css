@@ -1,0 +1,425 @@
+
+:root{
+    --dark-grey: #353132;
+    --minty: #E7F2F1;
+    /* --minty: #dbefed; */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  font-family: 'Montserrat';
+}
+
+header{
+    width: 100%;
+    max-width: 1920px;
+    min-height: 780px;
+    max-height: 780px;
+    background-image: url(assets/jordan-arnold-Ul07QK2AR-0-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+nav{
+    width: 100%;
+    max-width: 1920px;
+    position: fixed;
+    z-index: 10;
+}
+
+#main-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background: #ffffff;
+    filter: drop-shadow(0px 1px 0px var(--dark-grey));
+}
+
+#main-menu li{
+    padding: 0 1rem;
+    list-style-type: none;
+}
+
+#main-menu li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    color: var(--dark-grey);
+}
+
+#hero-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1920px;
+    min-height: 780px;
+}
+
+#logo{
+    width: 100%;
+    max-width: 250px;
+    height: 100%;
+    max-height: 250px;
+}
+
+.container{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 1740px;
+  margin: 5% auto;
+  padding: 0 1rem;
+  position: relative;
+}
+
+
+/* ===== New Finds Section ===== */
+  
+  .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: center;
+    text-align: center;
+    width: 100%;
+    max-width: 813px;
+    height: 100%;
+    max-height: 343px;
+    padding: 2.5em;
+    position: absolute;
+    left: 0;
+    background: var(--minty);
+    border-radius: 20px;
+  }
+  
+  .title{
+    font-family: 'Cormorant SC', sans-serif;
+    font-size: 70px;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card p{
+    max-width: 690px;
+    margin-bottom: 2.5rem;
+    align-self: center;
+    text-align: left;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--dark-grey);
+  }
+  
+  #link{
+    align-self: flex-end;
+    margin-right: 4%;
+    color: var(--dark-grey);
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  
+  #image{
+    width: 100%;
+    max-width: 1050px;
+    max-height: 650px;
+  }
+  
+  #image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+
+  /* ===== Style Section ===== */
+
+  #style-section{
+    width: 100%;
+    max-width: 1920px;
+    padding: 2rem 0;
+    background: var(--minty);
+    text-align: center;
+  }
+
+  #style-section .container{
+    justify-content: center;
+    margin: 3% auto;
+  }
+
+  #style-section p{
+    width: 100%;
+    max-width: 1290px;
+    margin: 0 auto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 150%;
+  }
+
+  .style-type{
+    width: 100%;
+    max-width: 580px;
+    max-height: 460px;
+    cursor: pointer;
+  }
+
+  .style-type:nth-child(2){
+    margin: 0 2rem;
+  }
+
+  .style-type img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .style-type .style-type-title{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    text-transform: uppercase;
+    line-height: 150%;
+    color: var(--dark-grey);
+  }
+
+
+    /* ===== Custom Furniture Section ===== */
+
+    #custom-furniture-section {
+      justify-content: flex-start;
+    }
+
+    #custom-furniture-section .card{
+      left: initial;
+      right: 0;
+    }
+
+
+    /* ===== Contact Us Section ===== */
+
+    #contact-section{
+      display: flex;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 1920px;
+      min-height: 420px;
+      margin-bottom: 5rem;
+      background-image: url('assets/DSC_7893.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    #contact-section #overlay{
+      width: 100%;
+      height: 100%;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #d7e8e6;
+      opacity: 90%;
+    }
+
+    #contact-section .container{
+      width: 100%;
+      height: 100%;
+      margin: 2% auto;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #contact-section .title, p, button{
+      position: relative;
+      z-index: 5;
+    }
+
+    #contact-section p{
+      width: 100%;
+      max-width: 1060px;
+      margin: 2% 0 3% 0;
+      text-align: center;
+      font-size: 22px;
+    }
+
+    #contact-section button{
+      width: 100%;
+      max-width: 380px;
+      height: 90px;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 26px;
+      background: #ffffff;
+      color: var(--dark-grey);
+      line-height: 37px;      
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 0;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    #contact-section button:focus{
+      outline: none;
+    }
+
+    footer{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      max-width: 1920px;
+      min-height: 295px;
+      background: var(--dark-grey);
+  }
+
+  
+    footer #contact-info{
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    #contact-info p{
+      margin: 1rem 0;
+    }
+
+    #social-media ul{
+      display: flex;
+      align-items: center;
+    }
+
+    .icons{
+      margin: 0 1rem;
+      list-style-type: none;
+    }
+
+    .icons a{
+      font-size: 60px;
+      color: #ffffff;
+    }
+
+    .icons img{
+      width: 61px;
+      height: 62px;
+    }
+
+    footer :is(#ILEA-logo){
+      width: 238px;
+      height: 135px;
+    }
+
+
+
+  /* ===== Media Queries ===== */
+
+  @media screen and (max-width: 1600px){
+  
+    .card{
+      max-width: 650px;
+    }
+    
+  }
+  
+  @media screen and (max-width: 1400px){
+    
+    .card{
+      max-width: 550px;
+      max-height: 275px;
+    }
+    
+    #title{
+      font-size: 60px;
+    }
+    
+    .card p{
+      font-size: 16px;
+    }
+    
+    #image, .style-type{
+      max-width: 950px;
+    }
+
+  }
+  
+  @media screen and (max-width: 1280px){
+    
+    .card {
+      position: initial;
+      max-width: 450px;
+      max-height: 100%;
+    }
+
+    #custom-furniture-section .card {
+      order: 2;
+    }
+
+    #image, .style-type{
+        height: 450px;
+    }
+   
+  }
+  
+  @media screen and (max-width: 1024px){
+    .container{
+      flex-direction: column;
+      margin: 0;
+    }
+    
+    .card{
+      max-width: 100%;
+      max-height: 280px;
+      padding: 1.5rem;
+    }
+
+    #custom-furniture-section .card {
+      order: initial;
+    }
+    
+    #title{
+      font-size: 50px;
+    }
+    
+    .card p{
+      font-size: 14px;
+      text-align: center;
+    }
+    
+    #link{
+      align-self: center;
+    }
+
+    .style-type{
+      padding-bottom: 5rem;
+    }
+
+    .style-type:nth-child(2){
+      margin: 0;
+    }
+  }
