@@ -1,3 +1,13 @@
+/* 
+Theme Name: Uniquely Chic Rentals
+Text Domain:
+Version: 1.0
+Description: 
+Tags:
+Author: Danielle Lyons
+*/
+
+
 
 :root{
     --dark-grey: #353132;
@@ -15,14 +25,31 @@ body{
   font-family: 'Montserrat';
 }
 
+/* styles for all links unless changed somewhere below */
+a{
+  text-decoration: none;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  color: var(--dark-grey);
+}
+
 header{
     width: 100%;
     max-width: 1920px;
     min-height: 780px;
     max-height: 780px;
-    background-image: url(assets/jordan-arnold-Ul07QK2AR-0-unsplash.jpg);
-    background-size: cover;
-    background-position: center;
+}
+
+#sub-header{
+  width: 100%;
+  max-width: 1920px;
+  min-height: 450px;
+  max-height: 450px;
+  margin-bottom: 70px;
+}
+
+#menu-icon::before, #mobile-nav-bar{
+  display: none;
 }
 
 nav{
@@ -30,21 +57,33 @@ nav{
     max-width: 1920px;
     position: fixed;
     z-index: 10;
+    background: #ffffff;
+    filter: drop-shadow(0px 1px 0px var(--dark-grey));
 }
 
-#main-menu{
+/* top level menu bar */
+#main-menu > ul{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 70px;
-    background: #ffffff;
-    filter: drop-shadow(0px 1px 0px var(--dark-grey));
+
+}
+
+/* selecting first level li's in the main menu */
+#main-menu ul > li{
+    padding: 20px 1rem;
+}
+
+/* selecting 2nd and 3rd level li's in sub menus */
+#main-menu ul > li > ul > li {
+  padding: 5px 1rem;
+  margin-bottom: 1rem;
 }
 
 #main-menu li{
-    padding: 0 1rem;
-    list-style-type: none;
+  list-style-type: none;
 }
 
 #main-menu li a{
@@ -58,20 +97,137 @@ nav{
     color: var(--dark-grey);
 }
 
-#hero-section{
+#main-menu > .sub-menu{
+  display: none;
+}
+
+.has-sub-menu{
+  text-align: center;
+}
+
+.has-sub-menu > .sub-menu{
+  display: block;
+  width: 16rem;
+  height: auto;
+  padding: 2rem 0 1rem 0;
+  background: var(--minty);
+  position: absolute;
+  top: 70px;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 250ms ease-in;
+  text-align: left;
+}
+
+#main-menu ul > .has-sub-menu li a {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+}
+
+.has-sub-menu > .sub-menu2{
+  display: block;
+  width: 17rem;
+  height: auto;
+  padding: 2rem 0 1rem 0;
+  background: #ffffff;
+  position: absolute;
+  top: 25px;
+  left: 255px;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 250ms ease-in;
+  text-align: left;
+}
+
+#main-menu ul > .has-sub-menu > .sub-menu2 li a{
+  font-size: 12px;
+}
+
+@media screen and (min-width: 1025px){
+
+  .has-sub-menu:hover > .sub-menu, .has-sub-menu:hover > .sub-menu2{
+    transform: scaleY(1);
+  }
+}
+
+.has-sub-menu > a::after{
+  margin-left: 5px;
+  content: '\f101';
+  font-family:'FontAwesome';
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--dark-grey);
+}
+
+#logo-section{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     max-width: 1920px;
     min-height: 780px;
+    position: relative;
+    z-index: 3;
+}
+
+/* styles for the logo on sub pages */
+#sub-logo-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1920px;
+    min-height: 450px;
+    position: relative;
+    z-index: 3;
+    top: 70px;
 }
 
 #logo{
-    width: 100%;
-    max-width: 250px;
-    height: 100%;
-    max-height: 250px;
+  width: 100%;
+  max-width: 250px;
+  height: 100%;
+  max-height: 250px;
+}
+
+#hero-image{
+  width: 100%;
+  max-width: 1920px;
+  min-height: 780px;
+  max-height: 780px;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+}
+
+#hero-image img{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* This is the banner that shows up on all sub pages */
+#sub-hero-image{
+  width: 100%;
+  max-width: 1920px;
+  min-height: 450px;
+  max-height: 450px;
+  position: absolute;
+  top: 70px;
+  overflow: hidden;
+}
+
+#sub-hero-image img{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+main{
+  position: relative;
 }
 
 .container{
@@ -82,6 +238,23 @@ nav{
   margin: 5% auto;
   padding: 0 1rem;
   position: relative;
+}
+
+#page-title{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1920px;
+  height: 116px;
+  margin-bottom: 130px;
+  color: var(--dark-grey);
+  font-family: 'Cormorant SC', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  background: var(--minty);
 }
 
 
@@ -292,6 +465,7 @@ nav{
       width: 100%;
       max-width: 1920px;
       min-height: 295px;
+      margin-top: 130px;
       background: var(--dark-grey);
   }
 
@@ -331,10 +505,341 @@ nav{
     }
 
     footer :is(#ILEA-logo){
-      width: 238px;
-      height: 135px;
+      width: 190px;
+      height: 107px;
     }
 
+
+  /* ===== Rental Collection Page ===== */
+
+    #rc-text-container{
+      width: 100%;
+      max-width: 1546px;
+      margin: 0 auto 130px auto;
+      padding: 0 4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #rc-text-container img{
+      width: 100%;
+      max-width: 680px;
+      height: 100%;
+      max-height: 470px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    #text-box{
+      width: 100%;
+      max-width: 930px;
+      padding: 2rem;
+      margin-left: 2rem;
+      background: var(--minty);
+      border-radius: 20px;
+    }
+
+    #text-box p{
+      max-width: 720px;
+      color: #000000;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 33px;
+      margin-bottom: 1rem;
+    }
+
+    #text-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    #categories-container{
+      width: 100%;
+      max-width: 1546px;
+      margin: 0 auto 130px auto;
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 450px));
+      grid-column-gap: 2rem;
+      grid-row-gap: 3rem;
+      grid-auto-flow: row;
+    }
+
+    .category{
+      width: 100%;
+      max-width: 450px;
+      overflow: hidden;
+    }
+
+    .cat-title{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-height: 80px;
+      padding: 1rem 4.5rem;
+      background: var(--minty);
+      border-radius: 20px 20px 0 0;
+      color: var(--dark-grey);
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .cat-image{
+      display: block;
+      width: 100%;
+      max-width: 450px;
+      height: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    #rc-bottom-text-section{
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 1920px;
+      height: 100%;
+      min-height: 388px;
+      padding: 2rem;
+      margin-bottom: 130px;
+      background: var(--minty);
+    }
+
+    .title{
+      margin-bottom: 1rem;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 50px;
+    }
+
+    #bottom-text{
+      width: 100%;
+      max-width: 980px;
+    }
+
+    #bottom-text p{
+      color: #000000;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 25px;
+      margin-bottom: 1rem;
+    }
+
+    #bottom-text a{
+      text-decoration: none;
+      font-weight: bold;
+      color: var(--dark-grey);
+    }
+
+ 
+  /* ===== Individual Category Page ===== */
+
+  #side-menu-container{
+    width: 100%;
+    max-width: 350px;
+    height: 100%;
+    position: absolute;
+    left: -350px;
+    top: 155px;
+  }
+
+  #side-menu{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 350px;
+    padding: 2rem;
+    position: sticky;
+    top: 300px;
+    background: var(--minty);
+    text-align: center;
+    transition: 250ms ease;
+  }
+
+  #side-menu-container.side-menu-open{
+    left: 0px;
+  }
+
+  #side-menu ul{
+    width: 100%;
+    max-width: 220px;
+  }
+
+  #side-menu li{
+    width: 100%;
+    margin-bottom: 2rem;
+    max-width: 355px;
+    list-style-type: none;
+  }
+
+  #side-menu li:last-child{
+    margin-bottom: 0;
+  }
+
+  #side-menu li a{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  #side-menu-button{
+    position: absolute;
+    left: 100%;
+    width: 50px;
+    height: 50px;
+    background: var(--minty);
+    cursor: pointer;
+  }
+
+  #category-items{
+    width: 100%;
+    max-width: 1546px;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 320px));
+    grid-column-gap: 2rem;
+    grid-row-gap: 3rem;
+    grid-auto-flow: row;
+  }
+
+  .item{
+    width: 100%;
+    max-width: 320px;
+    overflow: hidden;
+  }
+
+  .item-image{
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: 100%;
+    max-height: 316px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .item-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 80px;
+    padding: 1rem 4.5rem;
+    background: var(--minty);
+    border-radius: 0 0 20px 20px;
+    color: var(--dark-grey);
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  /* ===== Text Page Styles ===== */
+
+  #text-page-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  #text-page-container img{
+    display: block;
+    width: 100%;
+    max-width: 620px;
+    height: 100%;
+    max-height: 530px;
+    object-fit: cover;
+    object-position: center;
+    align-self: flex-start;
+  }
+
+  #text-content{
+    width: 100%;
+    max-width: 875px;
+    margin-left: 2rem;
+    align-self: flex-start;
+
+  }
+
+  #text-content p{
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 1.5rem;
+  }
+
+
+  /* ===== Who We Are Page Styles ===== */
+
+  .bio-box{
+    display: flex;
+    width: 100%;
+    max-width: 1590px;
+    margin: 0 auto 130px auto;
+    padding: 0 2rem;
+  }
+
+  .bio .name{
+    width: 100%;
+    max-width: 430px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    background: var(--minty);
+    border-radius: 10px;
+    font-family: 'Cormorant SC';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .business-title{
+    margin-bottom: 2rem;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+  }
+
+  .bio-image{
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    max-height: 500px;
+    margin-right: 4rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .bio p{
+    width: 100%;
+    max-width: 1080px;
+    margin-bottom: 1rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+  }
 
 
   /* ===== Media Queries ===== */
@@ -387,33 +892,139 @@ nav{
   }
   
   @media screen and (max-width: 1024px){
-    .container{
+
+    /* ===== Moble Nav Styles ===== */
+
+    #mobile-nav-bar{
+      display: block;
+      width: 100%;
+      height: 70px;
+      background: #ffffff;
+      position: fixed;
+      z-index: 20;
+    }
+
+    #menu-icon::before{
+      content: '\f0c9';
+      display: block;
+      position: fixed;
+      right: 50px;
+      top: 20px;
+      z-index: 20;
+      font-family: 'FontAwesome';
+      font-weight: 400;
+      font-size: 30px;
+      color: var(--dark-grey);
+    }
+
+    #menu-icon.close::before{
+      content: '\f00d';
+      display: block;
+      position: fixed;
+      right: 50px;
+      top: 20px;
+      z-index: 20;
+      font-family: 'FontAwesome';
+      font-weight: 400;
+      font-size: 30px;
+      color: var(--dark-grey);
+    }
+
+    #main-menu{
+      transform: scaleY(0);
+      transition: transform 350ms ease-in-out;
+      transform-origin: top;
+    } 
+
+    #main-menu > ul{
+      height: 100%;
+      padding-top: 5rem;
       flex-direction: column;
-      margin: 0;
+      justify-content: flex-start;
+    }
+
+    #main-menu.show-menu{
+      transform: scaleY(1);
+    }
+
+    #main-menu li {
+      margin-bottom: 3rem;
+    }
+
+    #main-menu li a{
+      font-size: 22px;
+    }
+
+
+    /* ===== Sub Navigation Styles ===== */
+    
+.has-sub-menu .sub-menu, .has-sub-menu .sub-menu2{
+      display: none;
+      position: relative;
+  }
+
+  .has-sub-menu > .sub-menu{
+    top: 25px;
+  }
+  
+  .has-sub-menu > .sub-menu2{
+    top: 10px;
+    left: 30px;
+  }
+
+.expand-btn.show-sub-menu + .expandable{
+    display:block;
+    transform: scaleY(1);
+  }
+
+    /* ===== Page Styles ===== */
+
+    #page-title{
+      font-size: 30px;
+    }
+
+
+    #logo {
+      max-width: 185px;
+  }
+
+    .container, #style-section .container{
+      flex-direction: column;
+      margin: 3rem auto;
     }
     
     .card{
       max-width: 100%;
       max-height: 280px;
       padding: 1.5rem;
+      border-radius: 20px 20px 0 0;
     }
+
+    .title {
+      font-size: 45px;
+  }
 
     #custom-furniture-section .card {
       order: initial;
     }
-    
-    #title{
-      font-size: 50px;
-    }
-    
-    .card p{
+        
+    .card p, #contact-section p, #style-section p{
       font-size: 14px;
       text-align: center;
+    }
+
+    #contact-section p{
+      margin: 2% 0 5% 0;
     }
     
     #link{
       align-self: center;
     }
+
+    #style-section {
+      padding: 2rem 0 0 0;
+
+  }
 
     .style-type{
       padding-bottom: 5rem;
@@ -422,4 +1033,101 @@ nav{
     .style-type:nth-child(2){
       margin: 0;
     }
+
+    .style-type .style-type-title {
+      font-size: 25px;
   }
+
+  #contact-section {
+    min-height: 245px;
+    margin: 3rem 0;
+}
+
+  #contact-section button {
+    max-width: 280px;
+    height: 60px;
+    font-size: 22px;
+}
+
+footer{
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+footer #contact-info {
+  font-size: 16px;
+}
+
+  #contact-info p {
+    margin: 0.5rem 0;
+}
+
+footer :is(#ILEA-logo) {
+  order: 3;
+  width: 97px;
+  height: 55px;
+}
+
+.icons a {
+  font-size: 45px;
+}
+
+.icons img {
+  width: 45px;
+  height: 45px;
+}
+
+#rc-text-container{
+  flex-direction: column;
+  padding: 0;
+}
+
+#rc-text-container img{
+  max-width: initial;
+}
+
+#text-box{
+  max-width: initial;
+  margin-left: 0;
+  border-radius: 0;
+}
+
+#text-box p{
+  margin: 0 auto 1rem auto;
+}
+
+#text-page-container{
+  flex-direction: column;
+
+}
+
+#text-page-container img{
+  max-width: initial;
+  margin-bottom: 3rem;
+}
+
+#text-content{
+  max-width: initial;
+  margin-left: 0;
+}
+
+.bio-box{
+  display: block;
+  max-width: 650px;
+}
+
+.bio .name{
+  max-width: initial;
+  border-radius: 0 0 10px 10px;
+}
+
+.bio-image{
+  max-width: initial;
+}
+
+.bio p{
+  font-size: 16px;
+}
+
+}
