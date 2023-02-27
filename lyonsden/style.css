@@ -120,6 +120,10 @@ nav{
     text-decoration: none;
  }
 
+ #main-menu li a:hover, #main-menu li a:focus{
+   color: #000000;
+ }
+
 
  #header-title{
      position: absolute;
@@ -246,7 +250,7 @@ nav{
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 100%;
+  width: 50%;
   min-height: 100vh;
   position: absolute;
   top: 0;
@@ -261,6 +265,7 @@ nav{
 #mobile-nav ul{
   width: 100%;
   padding: 15% 0 5% 0;
+  list-style-type: none;
 }
 
 #mobile-nav li{
@@ -283,6 +288,30 @@ nav{
   transform: scaleX(1);
 }
 
+#sub-title{
+  font-size: 30px;
+}
+
+}
+
+@media screen and (max-width: 680px){
+  #top-button{
+    max-width: 60px;
+    position: relative;
+    right: unset;
+    bottom: unset;
+    margin: 0 auto;
+  }
+
+  #top-button img{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px){
+  #mobile-nav{
+    width: 60%;
+  }
 }
 
  /* ===== Intro section ==== */
