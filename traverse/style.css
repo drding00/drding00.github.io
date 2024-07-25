@@ -1,0 +1,168 @@
+
+/*
+
+FONTS
+
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'League Spartan', sans-serif;
+font-family: 'Open Sans', sans-serif;
+
+COLORS
+
+yellow: #FFD952
+
+*/
+
+:root{
+  --allcap: 'Josefin Sans', sans-serif;
+  --bigtext: 'League Spartan', sans-serif;
+  --text: 'Open Sans', sans-serif;
+  --yellow: #FFD952;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body{
+    width: 100%;
+  }
+  
+  header, footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 75px;
+    padding-top: 3%;
+    color: #ffffff;
+  }
+  
+  header{
+    position: fixed;
+    z-index: 2;
+  }
+
+  #logo_nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1920px;
+    padding: 0 8%;
+    text-transform: uppercase;
+    font-family: var(--allcap);
+    font-weight: 600;
+  }
+
+  #logo{
+    font-size: 30px;
+  }
+
+  #main_nav{
+    display: flex;
+    gap: 4%;
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+
+  #main_nav li{
+    list-style-type: none;
+  }
+
+  #main_nav li a{
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: 400;
+  }
+
+  #main_nav li a::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: var(--yellow);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 250ms ease-in;
+  }
+  
+  #main_nav li a:hover::after{
+    transform: scaleX(1);
+  }
+
+  /* #main_nav li a:hover{
+    border-bottom: 3px solid var(--yellow);
+  } */
+  
+  .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 105vh;
+    position: sticky;
+    top: 0;
+  }
+  
+  .card:nth-of-type(1){
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 8%;
+    background: url(assets/home.png);
+    background-size: cover;
+    background-position: center;
+ 
+  }
+
+  .bigtext{
+    font-family: var(--bigtext);
+    font-size: 110px;
+    font-weight: 600;
+    color: #ffffff;
+
+  }
+
+  .cab_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 275px;
+    height: 80px;
+    position: relative;
+    top: 8%;
+    background: var(--yellow);
+    border: none;
+    border-radius: 5px;
+    font-family: var(--allcap);
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
+  .card:nth-of-type(2){
+    background: url(assets/about.png);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .card:nth-of-type(3){
+    background: url(assets/discover.png);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .card:nth-of-type(4){
+    background: url(assets/start.png);
+    background-size: cover;
+    background-position: center;
+  }
+

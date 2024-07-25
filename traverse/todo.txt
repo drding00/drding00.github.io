@@ -1,0 +1,14 @@
+SITEWIDE TODOS:
+
+[] Add mobile navigation
+
+
+HOME PAGE TODOS:
+
+[] Add logo graphic
+[] Add dot arrow line under logo and nav
+[] Add hover effect to nav links
+[] Add hover effect to cab button
+[] Add underline to "your"
+[] Tweaks for mobile view
+
